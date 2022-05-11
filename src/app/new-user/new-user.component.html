@@ -1,0 +1,5 @@
+<h2>Add New User</h2>
+
+<input type="text" class="form-control" #status>
+<button class="btn btn-primary" (click)="setActive(status.value)">Active</button> 
+<button class="btn btn-danger" (click)="setInactive(status.value)">Inactive</button>

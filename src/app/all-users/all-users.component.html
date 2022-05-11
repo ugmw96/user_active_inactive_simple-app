@@ -1,0 +1,26 @@
+<h2>All Users</h2>
+
+
+<button class="btn btn-primary" (click)="refresh()">Refresh</button>
+<br>
+<ul class="list-group">
+    <li class="list-group-item"
+        *ngFor="let users of allUsers; let i=index">
+
+        <div class="row">
+            <div class="col-md-8">
+                {{users}}
+            </div>
+            <div class="col-md-offset-10">
+                <button class="btn btn-dager" (click)="onRemove(i)">Remove</button>
+            </div>
+        </div>
+    
+    </li>
+
+        
+</ul>
+
+<button class="btn btn-primary"
+        (click)="onNewUser()">Add New User</button>
+

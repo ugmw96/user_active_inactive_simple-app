@@ -1,0 +1,19 @@
+<div class="container">
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-2"> 
+ <div class="list-group">
+    <ul class="list-group-item"
+        *ngFor="let uses of allusers;let id = index">
+        <h2>{{uses.name}}</h2>
+        <li>{{uses.email}}</li>
+        <br>
+        <div class="button-group">
+            <button class="btn btn-primary" (click)="deleteUser(id)">Delete</button>
+            <button class="btn btn-primary">Edit</button>
+        </div>
+        
+    </ul>
+</div> 
+</div>
+</div>
+</div>

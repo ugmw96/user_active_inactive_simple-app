@@ -1,0 +1,19 @@
+<h2>Active Users</h2>
+<ul class="list-group">
+    <li class="list-group-item"
+        *ngFor="let users of user; let i=index">
+
+            <div class="row">
+                <div class="col-lg-8">
+                    {{users}}
+                </div>
+                <div class="col-lg-offset-9">
+                    <button class="btn btn-danger"
+                        (click)="onSetToInactivate(i)"
+                        >Change to Inactivate</button>
+                </div>
+            </div>
+            
+            
+    </li>
+</ul>

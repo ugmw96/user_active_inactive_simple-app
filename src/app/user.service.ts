@@ -23,6 +23,18 @@ export class UserService {
     this.counterService.inactivetoActive();
   }
 
+  setActivateUser(user:string){
+    this.activeUser.push(user);
+  }
+
+  setInactivateUser(user:string){
+    this.inactivateUser.push(user);
+  }
+
+  allUsers(){
+    return this.activeUser.concat(this.inactivateUser);
+  }
+
 
   
 }
