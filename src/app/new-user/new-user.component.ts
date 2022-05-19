@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 
 @Component({
@@ -16,7 +17,11 @@ export class NewUserComponent implements OnInit {
     this.userService.setInactivateUser(status);
   }
 
-  constructor(private userService:UserService) { }
+  navLogin(){
+    this.router.navigate(['/login']);
+  }
+
+  constructor(private userService:UserService, private router:Router) { }
 
   ngOnInit(): void {
   }
